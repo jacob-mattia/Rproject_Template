@@ -12,9 +12,8 @@
 #Installs and runs libraries necessary for basic formatting and data manipulation
 if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
 library(renv)
-if(!exists("renv_initialized")){
+if(!file.exists("renv.lock")){
   renv::init()
-  renv_initialized=TRUE
 }
 renv::restore()
 
