@@ -2,10 +2,11 @@
 
 ####META DATA####
 #project_starter
-#v0.0
+#v0.0.1
 #Jacob Mattia
 #Sets up environment and loads in appropriate libraries. Run at the start of each session.
-
+#Version change: added line to automatically create data and results folder without pushing them to git
+#NOTE: "data", "analysis", and "results" folders will NOT sync to github
 
 ####BASE INSTALLS####
 #Installs and runs libraries necessary for basic formatting and data manipulation
@@ -33,4 +34,8 @@ conflict_prefer("select", "dplyr")
 ####SPECIALIZED INSTALLS####
 #
 
+
+####END STUFF####
+
+system("mkdir -p data results analysis")
 renv::snapshot()
