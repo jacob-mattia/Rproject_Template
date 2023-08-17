@@ -15,6 +15,8 @@ if(!exists("renv_initialized")){
   renv::init()
   renv_initialized=TRUE
 }
+renv::restore()
+
 
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
 library(conflicted)
@@ -30,3 +32,5 @@ conflict_prefer("select", "dplyr")
 
 ####SPECIALIZED INSTALLS####
 #
+
+renv::snapshot()
