@@ -15,7 +15,6 @@ library(renv)
 if(!file.exists("renv.lock")){
   renv::init()
 }
-renv::restore()
 
 
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
@@ -35,5 +34,7 @@ conflict_prefer("select", "dplyr")
 
 ####END STUFF####
 
-system("mkdir -p data results analysis")
+dir.create("data")
+dir.create("results")
+dir.create("analysis")
 renv::snapshot()
