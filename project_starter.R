@@ -12,8 +12,8 @@
 #Installs and runs libraries necessary for basic formatting and data manipulation
 if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
 library(renv)
-if (!exists("rev_initialized")){
-  renv_initialized <- TRUE
+if (!file.exists("renv_initialized.RData")){
+  save(TRUE, file = "renv_initialized.RData")
   renv::init()
 }
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
