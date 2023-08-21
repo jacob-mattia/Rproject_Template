@@ -32,3 +32,5 @@ conflict_prefer("select", "dplyr")
 dir.create("data")
 dir.create("results")
 dir.create("analysis")
+
+renv::snapshot()
