@@ -13,7 +13,7 @@
 if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
 library(renv)
 if (!file.exists("renv_initialized.RData")){
-  save(TRUE, file = "renv_initialized.RData")
+  save("TRUE", file = "renv_initialized.RData")
   renv::init()
 }
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
