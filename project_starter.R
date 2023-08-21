@@ -12,7 +12,7 @@
 #Installs and runs libraries necessary for basic formatting and data manipulation
 if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
 library(renv)
-if (!exists("rev_initialized"){
+if (!exists("rev_initialized")){
   renv_initialized <- TRUE
   renv::init()
 }
