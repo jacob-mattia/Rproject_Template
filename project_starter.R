@@ -10,6 +10,8 @@
 
 ####BASE INSTALLS####
 #Installs and runs libraries necessary for basic formatting and data manipulation
+renv::restore()
+config$config$auto.snapshot(TRUE)
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
 library(conflicted)
 if (!require("tidyverse", character.only = TRUE)){renv::install("tidyverse", dependencies = TRUE)}
