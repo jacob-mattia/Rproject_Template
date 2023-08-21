@@ -10,13 +10,6 @@
 
 ####BASE INSTALLS####
 #Installs and runs libraries necessary for basic formatting and data manipulation
-if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
-library(renv)
-if (!file.exists("renv_initialized.RData")){
-  renv_initialized <- TRUE
-  save(renv_initialized, file = "renv_initialized.RData")
-  renv::init()
-}
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
 library(conflicted)
 if (!require("tidyverse", character.only = TRUE)){renv::install("tidyverse", dependencies = TRUE)}
