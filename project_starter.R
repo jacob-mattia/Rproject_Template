@@ -12,11 +12,7 @@
 #Installs and runs libraries necessary for basic formatting and data manipulation
 if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
 library(renv)
-renv::init()
-if (!require("BiocManager", character.only = TRUE)){
-  renv::install("BiocManager")
-  BiocManager::install()
-}
+renv::restore()
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
 library(conflicted)
 if (!require("tidyverse", character.only = TRUE)){renv::install("tidyverse", dependencies = TRUE)}
