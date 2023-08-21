@@ -12,7 +12,7 @@
 #Installs and runs libraries necessary for basic formatting and data manipulation
 if (!require("renv", character.only = TRUE)){install.packages("renv", dependencies = TRUE)}
 library(renv)
-sys.sleep(5)
+Sys.sleep(5)
 renv::restore()
 if (!require("BiocManager", character.only = TRUE)){renv::install("BiocManager")}
 BiocManager::install()
