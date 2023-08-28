@@ -28,7 +28,6 @@ A default template for starting new git and renv compatible R projects
 + Main analyis pipleine should be contained in "analysis.R" file within scripts folder.
 + Be sure to include descriptive commits when syncing with github to ensure easy troubleshooting.
 
-## Misc Info
-
+For any questions on using this template, email jacob.mattia@gmail.com
 
 
