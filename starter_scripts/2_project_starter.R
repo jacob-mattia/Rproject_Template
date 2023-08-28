@@ -30,7 +30,7 @@ conflict_prefer("select", "dplyr")
 #Installs and loads project-specific libraries (can also load in analysis script)
 
 ####END STUFF####
-#Creates directories that do not sync with github if they don't exist and sanpshots the project to save its status
+#Creates storage directories that do not sync with github snapshots the project to save its status
 dir.create("data")
 dir.create("results")
 dir.create("analysis")
