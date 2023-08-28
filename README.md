@@ -19,7 +19,7 @@ A default template for starting new git and renv compatible R projects
 5. Github will now be updated with newest file versions
 
 ## Important Notes
-+ Ensure that R version in renv.lock matches the R version being used (default set to 4.1.3).
++ Renv will track R version, but will **not** update it via renv.lock. It will provide a warning if the R versions are different.
 + Github is meant for storing updates to code, not data. Trying to sync large files **will not work.**
     + As such, "data", "analysis", and "results" folder will not sync with github. Use rysnc or other methods to move data between systems.
 
