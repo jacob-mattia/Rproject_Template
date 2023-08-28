@@ -2,14 +2,14 @@
 
 ####META DATA####
 #project_starter
-#v0.0.2
-#Jacob Mattia
-#Sets up environment and loads in appropriate libraries. Run after activating renv.
-#Version change: modified to work with seperate renv_activation.R script
+#v0.0.3
+#Original author: Jacob Mattia
+#Summary: Sets up environment and loads in appropriate libraries. Run after activating renv.
+#Version change: Added "here" package and slightly modified comment formatting
 #NOTE: "data", "analysis", and "results" folders will NOT sync to github
 
-####BASE INSTALLS####
-#Installs and runs libraries necessary for basic formatting and data manipulation
+####BASE LIBRARIES####
+#Installs and loads libraries necessary for basic formatting and data manipulation
 renv::restore() #Loads in current renv.lock
 options(renv.config.auto.snapshot = TRUE) #Ensures renv will automatically update
 if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
@@ -20,15 +20,17 @@ if (!require("stringr", character.only = TRUE)){renv::install("stringr", depende
 library(stringr)
 if (!require("dplyr", character.only = TRUE)){renv::install("dplyr", dependencies = TRUE)}
 library(dplyr)
+if (!require("here", character.only = TRUE)){renv::install("here", dependencies = TRUE)}
+library(here)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("select", "dplyr")
 
 
-####SPECIALIZED INSTALLS####
-
+####SPECIALIZED LIBRARIES####
+#Installs and loads project-specfic libraries (can also load in analysis script)
 
 ####END STUFF####
-
+#Creates directories that do not sync with github if they don't exist and sanpshots the project to save its status
 dir.create("data")
 dir.create("results")
 dir.create("analysis")
