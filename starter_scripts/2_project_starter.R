@@ -27,7 +27,7 @@ conflict_prefer("select", "dplyr")
 
 
 ####SPECIALIZED LIBRARIES####
-#Installs and loads project-specfic libraries (can also load in analysis script)
+#Installs and loads project-specific libraries (can also load in analysis script)
 
 ####END STUFF####
 #Creates directories that do not sync with github if they don't exist and sanpshots the project to save its status
