@@ -12,15 +12,15 @@
 #Installs and loads libraries necessary for basic formatting and data manipulation
 renv::restore() #Loads in current renv.lock
 options(renv.config.auto.snapshot = TRUE) #Ensures renv will automatically update
-if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE)}
+if (!require("conflicted", character.only = TRUE)){renv::install("conflicted", dependencies = TRUE, prompt = FALSE)}
 library(conflicted)
-if (!require("tidyverse", character.only = TRUE)){renv::install("tidyverse", dependencies = TRUE)}
+if (!require("tidyverse", character.only = TRUE)){renv::install("tidyverse", dependencies = TRUE, prompt = FALSE)}
 library(tidyverse)
-if (!require("stringr", character.only = TRUE)){renv::install("stringr", dependencies = TRUE)}
+if (!require("stringr", character.only = TRUE)){renv::install("stringr", dependencies = TRUE, prompt = FALSE)}
 library(stringr)
-if (!require("dplyr", character.only = TRUE)){renv::install("dplyr", dependencies = TRUE)}
+if (!require("dplyr", character.only = TRUE)){renv::install("dplyr", dependencies = TRUE, prompt = FALSE)}
 library(dplyr)
-if (!require("here", character.only = TRUE)){renv::install("here", dependencies = TRUE)}
+if (!require("here", character.only = TRUE)){renv::install("here", dependencies = TRUE, prompt = FALSE)}
 library(here)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("select", "dplyr")
